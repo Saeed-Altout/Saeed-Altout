@@ -1,10 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { Frame, HomeIcon, SquareTerminal } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 
 import { NavMain } from "@/components/shared/nav-main";
-import { NavUser } from "@/components/shared/nav-user";
 import {
   Sidebar,
   SidebarContent,
@@ -15,6 +14,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { Logo } from "./logo";
+import { SidebarOptInForm } from "./sidebar-opt-in-form";
 
 // This is sample data.
 const data = {
@@ -31,33 +31,26 @@ const data = {
       isActive: false,
       items: [],
     },
-    {
-      title: "Playground",
-      url: "#",
-      icon: SquareTerminal,
-      isActive: true,
-      items: [
-        {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-  ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
+    // {
+    //   title: "Playground",
+    //   url: "#",
+    //   icon: SquareTerminal,
+    //   isActive: true,
+    //   items: [
+    //     {
+    //       title: "History",
+    //       url: "#",
+    //     },
+    //     {
+    //       title: "Starred",
+    //       url: "#",
+    //     },
+    //     {
+    //       title: "Settings",
+    //       url: "#",
+    //     },
+    //   ],
+    // },
   ],
 };
 
@@ -77,7 +70,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavMain items={data.navMain} />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <SidebarOptInForm />
       </SidebarFooter>
     </Sidebar>
   );
