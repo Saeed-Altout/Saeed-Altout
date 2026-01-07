@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 export function HeroSection() {
   return (
     <section id="hero">
-      <Container className="flex items-center justify-center flex-col gap-y-6 text-center py-20">
+      <div className="size-300 left-[50%] -translate-x-[50%] bg-[#db1fff] absolute rounded-full -top-[85%] z-0 blur-[150px]" />
+      <Container className="relative z-10 flex items-center justify-center flex-col gap-y-6 text-center py-20">
         <Badge variant="outline">
           <StarsIcon />
           Frontend Developer specialist in React.js & Next.js

@@ -167,3 +167,12 @@
     scrollbar-color: var(--input) transparent;
   }
 }
+
+
+.gradient-text {
+  background: linear-gradient(90deg, #7030ef, #db1fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
