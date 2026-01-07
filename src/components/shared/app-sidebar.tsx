@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { HomeIcon } from "lucide-react";
+import { HomeIcon, UserIcon } from "lucide-react";
 
 import { NavMain } from "@/components/shared/nav-main";
 import {
@@ -28,6 +28,13 @@ const data = {
       title: "Home",
       url: "/",
       icon: HomeIcon,
+      isActive: false,
+      items: [],
+    },
+    {
+      title: "About",
+      url: "/about",
+      icon: UserIcon,
       isActive: false,
       items: [],
     },
