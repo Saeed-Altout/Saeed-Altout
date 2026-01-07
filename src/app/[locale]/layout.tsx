@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
+
+import { Poppins, Cairo } from "next/font/google";
 import "../globals.css";
 
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -7,17 +10,18 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { routing } from "@/i18n/routing";
-import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
+import { cn } from "@/lib/utils";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cairo = Cairo({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -27,13 +31,11 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
-
 }>) {
-
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -42,11 +44,14 @@ export default async function RootLayout({
   // Enable static rendering
   setRequestLocale(locale);
 
-
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={cn(
+          locale === "en" && poppins.className,
+          locale === "ar" && cairo.className,
+          "antialiased"
+        )}
       >
         <NextIntlClientProvider>
           <ThemeProvider
@@ -55,7 +60,6 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-
             {children}
             <Toaster />
           </ThemeProvider>
