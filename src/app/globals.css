@@ -45,6 +45,10 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
+  --color-brand-1: var(--brand-1);
+  --color-brand-2: var(--brand-2);
+  --color-brand-3: var(--brand-3);
+
   --gap: 1rem;
   --duration: 20s;
 
@@ -103,6 +107,10 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --brand-1: #7030ef;
+  --brand-2: #db1fff;
+  --brand-3: #090820;
 }
 
 .dark {
@@ -137,6 +145,10 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  --brand-1: #7030ef;
+  --brand-2: #db1fff;
+  --brand-3: #090820;
 }
 
 @layer base {
