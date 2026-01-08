@@ -9,6 +9,7 @@ import { Container } from "@/components/ui/container";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Heading } from "@/components/ui/heading";
 
 export function ContactFormSection() {
   const [isLoading, setIsLoading] = useState(false);
@@ -30,16 +31,9 @@ export function ContactFormSection() {
   }
 
   return (
-    <section id="contact-form" className="py-20 bg-muted/30">
-      <Container>
-        <div className="max-w-2xl mx-auto space-y-8">
-          <div className="text-center space-y-2">
-            <h2 className="text-3xl font-bold">Send Me a Message</h2>
-            <p className="text-muted-foreground">
-              Fill out the form below and I&apos;ll get back to you shortly.
-            </p>
-          </div>
-
+    <section id="contact-form">
+      <Container className="pt-6">
+        <div className="max-w-4xl mx-auto space-y-8">
           <form
             onSubmit={onSubmit}
             className="space-y-6 p-8 rounded-xl border bg-card/50 backdrop-blur-sm shadow-sm"

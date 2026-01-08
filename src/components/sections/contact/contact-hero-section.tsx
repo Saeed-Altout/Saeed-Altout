@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container";
 export function ContactHeroSection() {
   return (
     <section id="contact-hero">
-      <Container className="relative flex items-center justify-center flex-col gap-y-6 text-center py-20">
+      <Container className="relative flex items-center justify-center flex-col gap-y-6 text-center">
         <Badge variant="outline">
           <MailIcon />
           Contact Me

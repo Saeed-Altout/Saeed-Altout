@@ -1,21 +1,18 @@
 import { ArrowRightIcon, PlusIcon } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { Heading } from "@/components/ui/heading";
 
 export function CTASection() {
   return (
     <section id="featured-projects">
-      <Container className="flex items-center justify-center flex-col gap-y-6 py-20">
-        <h1 className="text-6xl font-bold max-w-4xl">
-          Contact With <span className="underline">Saeed Altout</span>
-        </h1>
-
-        <p className="text-muted-foreground max-w-2xl leading-relaxed">
-          Building responsive, interactive web interfaces with React,
-          TypeScript, Tailwind CSS, and Framer Motion, using reusable UI
-          components and animations for modern, engaging experiences.
-        </p>
-        <div className="relative mx-auto flex w-full max-w-3xl flex-col justify-between gap-y-6 border-y bg-[radial-gradient(35%_80%_at_25%_0%,--theme(--color-foreground/.08),transparent)] px-4 py-8">
+      <Container className="space-y-8">
+        <Heading
+          title="Let's Build Something Amazing Together"
+          description="Whether you have a project in mind or just want to connect, I' d love to hear from you. Let's create something extraordinary."
+        />
+        <div className="relative mx-auto flex w-full max-w-4xl flex-col justify-between gap-y-6 border-y bg-[radial-gradient(35%_80%_at_25%_0%,--theme(--color-foreground/.08),transparent)] px-4 py-8">
           <PlusIcon
             className="absolute top-[-12.5px] left-[-11.5px] z-1 size-6"
             strokeWidth={1}
@@ -40,17 +37,17 @@ export function CTASection() {
 
           <div className="space-y-1">
             <h2 className="text-center font-bold text-2xl">
-              Let your plans shape the future.
+              Ready to start your next project?
             </h2>
             <p className="text-center text-muted-foreground">
-              Start your free trial today. No credit card required.
+              Get in touch and let&apos;s discuss how I can help bring your
+              vision to life.
             </p>
           </div>
 
           <div className="flex items-center justify-center gap-2">
-            <Button variant="outline">Contact Sales</Button>
-            <Button>
-              Get Started <ArrowRightIcon className="size-4 ml-1" />
+            <Button variant="outline">
+              Get Started <ArrowRightIcon />
             </Button>
           </div>
         </div>
