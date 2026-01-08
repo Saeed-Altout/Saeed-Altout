@@ -1,6 +1,30 @@
 import { CodeIcon, RocketIcon, HeartIcon } from "lucide-react";
 
-export const projects = [];
+export const projects = [
+  {
+    id: "1",
+    name: "Flexify – Portfolio & CMS Platform",
+    imageUrl: "",
+    description:
+      "A full-featured portfolio application with a public-facing website and an admin dashboard. Includes CRUD management for projects, services, technologies, testimonials, users, and site settings. Built with Next.js, TypeScript, Tailwind CSS, Zustand, React Query, and Framer Motion.",
+    liveUrl: "https://flexifypro.vercel.app/en",
+  },
+  {
+    id: "2",
+    name: "Notion Clone – Real-Time Productivity Platform",
+    imageUrl: "",
+    description:
+      "A full-stack Notion-like application featuring real-time collaboration, hierarchical documents, dark mode, and live updates. Includes secure authentication, file handling, and optimistic UI updates using Convex, Clerk, and EdgeStore.",
+    liveUrl: "https://flexify-notion-clone.vercel.app/",
+  },
+  {
+    id: "3",
+    name: "Vendo – Multi-Store E-commerce CMS",
+    imageUrl: "",
+    description:
+      "A scalable multi-tenant e-commerce CMS with centralized admin dashboard and public storefronts. Includes secure authentication, Stripe payments, webhook-based order automation, and high-performance UI.",
+  },
+];
 
 export const technologies = [
   {
@@ -12,6 +36,71 @@ export const technologies = [
     label: "Node js",
     name: "nodedotjs",
     color: "#5FA04E",
+  },
+  {
+    label: "Tailwind CSS",
+    name: "tailwindcss",
+    color: "#06B6D4",
+  },
+  {
+    label: "Shadcn/ui",
+    name: "shadcnui",
+    color: "#000000",
+  },
+  {
+    label: "Radix UI",
+    name: "radixui",
+    color: "#161618",
+  },
+  {
+    label: "Material UI",
+    name: "mui",
+    color: "#007FFF",
+  },
+  {
+    label: "Framer Motion",
+    name: "framer",
+    color: "#0055FF",
+  },
+  {
+    label: "Axios",
+    name: "axios",
+    color: "#5A29E4",
+  },
+  {
+    label: "Supabase",
+    name: "supabase",
+    color: "#3FCF8E",
+  },
+  {
+    label: "TypeORM",
+    name: "typeorm",
+    color: "#FE0803",
+  },
+  {
+    label: "SASS/SCSS",
+    name: "sass",
+    color: "#CC6699",
+  },
+  {
+    label: "JavaScript",
+    name: "javascript",
+    color: "#F7DF1E",
+  },
+  {
+    label: "GitHub",
+    name: "github",
+    color: "#181717",
+  },
+  {
+    label: "GitLab",
+    name: "gitlab",
+    color: "#FC6D26",
+  },
+  {
+    label: "Nest js",
+    name: "nestjs",
+    color: "#E0234E",
   },
   {
     label: "TypeScript",
@@ -87,68 +176,65 @@ export const stats = [
 export const skillCategories = [
   {
     category: "Frontend Development",
-    skills: [
-      "React.js",
-      "Next.js",
-      "TypeScript",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-    ],
+    skills: ["Next.js", "React.js", "TypeScript", "JavaScript"],
   },
   {
     category: "Styling & UI",
     skills: [
       "Tailwind CSS",
-      "Shadcn/ui",
+      "shadcn/ui",
+      "Radix UI",
+      "Material UI",
       "Framer Motion",
-      "Responsive Design",
-      "CSS Modules",
       "SASS/SCSS",
+      "ReUi",
     ],
   },
   {
-    category: "State & Data",
+    category: "State & Data Management",
     skills: [
-      "React Query",
       "Zustand",
-      "Redux Toolkit",
-      "REST APIs",
-      "GraphQL",
+      "TanStack Query (React Query)",
       "Axios",
+      "REST APIs",
+      "React Hook Form",
+      "Zod",
+    ],
+  },
+  {
+    category: "Authentication & Security",
+    skills: [
+      "NextAuth.js",
+      "JWT Authentication",
+      "Role-Based Access Control (RBAC)",
+      "OAuth",
+    ],
+  },
+  {
+    category: "Backend & Databases Basics",
+    skills: [
+      "Node.js",
+      "NestJS",
+      "Prisma",
+      "TypeORM",
+      "PostgreSQL",
+      "MySQL",
+      "Supabase",
+      "Convex",
+      "Firebase",
     ],
   },
   {
     category: "Tools & Workflow",
     skills: [
-      "Git & GitHub",
-      "VS Code",
-      "npm/yarn",
-      "Webpack",
-      "Vite",
-      "ESLint/Prettier",
-    ],
-  },
-  {
-    category: "Backend Basics",
-    skills: [
-      "Node.js",
-      "Express.js",
-      "Prisma",
-      "PostgreSQL",
-      "MongoDB",
-      "Authentication",
-    ],
-  },
-  {
-    category: "Best Practices",
-    skills: [
-      "Clean Code",
-      "Component Architecture",
-      "Performance Optimization",
-      "Accessibility",
-      "SEO",
-      "Testing",
+      "GitHub",
+      "GitLab",
+      "Vercel",
+      "Postman",
+      "APIDog",
+      "Figma",
+      "Notion",
+      "ClickUp",
     ],
   },
 ];
@@ -156,41 +242,58 @@ export const skillCategories = [
 export const experiences = [
   {
     role: "Frontend Developer",
-    company: "Freelance",
-    period: "2023 - Present",
-    type: "Remote",
+    company: "Titech",
+    period: "Sep 2025 – Present",
+    type: "Part-time · Remote",
     description:
-      "Building custom web applications for clients worldwide, specializing in React and Next.js solutions. Delivering high-quality, scalable projects that exceed client expectations.",
+      "Working on a Relief Management System, building responsive dashboards and scalable front-end features using modern Next.js architecture. Collaborating closely with back-end engineers to ensure reliable API integration and maintainable UI structures.",
     achievements: [
-      "Developed 15+ production-ready web applications",
-      "Maintained 98% client satisfaction rate",
-      "Implemented modern UI/UX best practices",
+      "Built responsive dashboards using Next.js, TypeScript, Tailwind CSS, and shadcn/ui",
+      "Integrated file uploads and API-driven data handling",
+      "Collaborated with back-end teams to deliver scalable front-end solutions",
     ],
   },
   {
-    role: "Full Stack Developer",
-    company: "Tech Startup",
-    period: "2022 - 2023",
-    type: "Full-time",
+    role: "Frontend Developer",
+    company: "Tech Pundits",
+    period: "Aug 2024 – Nov 2025",
+    type: "Full-time · On-site",
     description:
-      "Contributed to building a SaaS platform from the ground up, working with both frontend and backend technologies to deliver a seamless user experience.",
+      "Developed scalable SaaS and PaaS platforms, including e-learning systems with dashboards, media galleries, and file handling. Focused on modular front-end architecture, state management, and multilingual-ready interfaces.",
     achievements: [
-      "Built reusable component library used across 5+ projects",
-      "Improved application performance by 40%",
-      "Collaborated with cross-functional teams",
+      "Built high-performance SaaS platforms using Next.js and TypeScript",
+      "Implemented advanced client-side state management with Zustand",
+      "Worked on multilingual and localization-ready applications",
+      "Led and supported front-end developers to improve code quality",
+      "Translated Figma designs into production-ready interfaces",
     ],
   },
   {
-    role: "Junior Frontend Developer",
-    company: "Digital Agency",
-    period: "2021 - 2022",
-    type: "Full-time",
+    role: "Frontend Developer",
+    company: "Logic Software Development",
+    period: "Dec 2024 – Jun 2025",
+    type: "Part-time · Remote",
     description:
-      "Started my professional journey creating responsive websites and web applications for various clients in different industries.",
+      "Focused on integrating front-end applications with back-end services, validating APIs, and implementing secure, role-based user flows across multiple systems.",
     achievements: [
-      "Converted 20+ designs to pixel-perfect implementations",
-      "Learned modern development workflows and tools",
-      "Participated in code reviews and team meetings",
+      "Tested and validated APIs to ensure correct data flow",
+      "Integrated third-party services such as OTP-less and WhatsApp solutions",
+      "Implemented role-based access control and permissions management",
+      "Worked on secure financial and payment-related workflows",
+    ],
+  },
+  {
+    role: "Frontend Developer Intern",
+    company: "Microteach",
+    period: "Jan 2020 – Oct 2023",
+    type: "Full-time · On-site",
+    description:
+      "Gained hands-on experience building and maintaining React-based user interfaces while working on multilingual platforms and RESTful API integrations.",
+    achievements: [
+      "Assisted in developing and maintaining UI components using React",
+      "Integrated RESTful APIs into front-end applications",
+      "Worked on responsive design and cross-browser compatibility",
+      "Collaborated with senior developers to fix bugs and improve features",
     ],
   },
 ];

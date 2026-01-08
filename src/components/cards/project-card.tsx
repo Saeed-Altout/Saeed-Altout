@@ -1,23 +1,24 @@
+import Image from "next/image";
+import { FolderIcon } from "lucide-react";
+
 import {
   Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Image from "next/image";
-import { Button } from "../ui/button";
-import { FolderIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { projects } from "@/constants";
 
 export function ProjectCard({
   project,
 }: {
-  project: { id: string; name: string; imageUrl?: string; description: string };
+  project: (typeof projects)[number];
 }) {
   return (
     <Card className="pt-0 overflow-hidden">
-      <CardHeader className="p-0 relative h-80 w-full flex items-center justify-center">
+      <CardHeader className="p-0 relative h-70 w-full flex items-center justify-center">
         {project.imageUrl ? (
           <Image
             src={project.imageUrl}
@@ -34,7 +35,9 @@ export function ProjectCard({
       </CardHeader>
       <CardHeader>
         <CardTitle>{project.name}</CardTitle>
-        <CardDescription>{project.description}</CardDescription>
+        <CardDescription className="line-clamp-2">
+          {project.description}
+        </CardDescription>
       </CardHeader>
       <CardFooter>
         <Button className="w-full" size="lg">

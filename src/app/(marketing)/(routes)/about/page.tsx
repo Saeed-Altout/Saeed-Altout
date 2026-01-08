@@ -4,6 +4,7 @@ import { SkillsSection } from "@/components/sections/about/skills-section";
 import { ExperienceSection } from "@/components/sections/about/experience-section";
 import { StatsSection } from "@/components/sections/about/stats-section";
 import { CTASection } from "@/components/sections/common/cta-section";
+import { TechnologiesSection } from "@/components/sections/common/technologies-section";
 
 export default function AboutPage() {
   return (
@@ -13,6 +14,7 @@ export default function AboutPage() {
       <StorySection />
       <SkillsSection />
       <ExperienceSection />
+      <TechnologiesSection />
       <CTASection />
     </main>
   );
