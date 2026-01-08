@@ -8,7 +8,8 @@ export function SkillsSection() {
     <section id="skills">
       <Container className="space-y-8">
         <Heading
-          title="Technical Expertise"
+          title="Technical"
+          special="Expertise"
           description="A comprehensive toolkit for building modern web applications from concept to deployment."
         />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

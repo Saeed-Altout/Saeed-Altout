@@ -1,6 +1,6 @@
 import { stats } from "@/constants";
 
-export default function StatCard({ stat }: { stat: (typeof stats)[0] }) {
+export function StatCard({ stat }: { stat: (typeof stats)[0] }) {
   return (
     <div className="text-center space-y-2 p-6">
       <p className="text-5xl font-bold text-primary">{stat.value}</p>

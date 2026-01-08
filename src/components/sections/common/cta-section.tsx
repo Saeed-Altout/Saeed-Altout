@@ -9,10 +9,11 @@ export function CTASection() {
     <section id="featured-projects">
       <Container className="space-y-8">
         <Heading
-          title="Let's Build Something Amazing Together"
+          title="Let's Build Something"
+          special="Amazing Together"
           description="Whether you have a project in mind or just want to connect, I' d love to hear from you. Let's create something extraordinary."
         />
-        <div className="relative mx-auto flex w-full max-w-4xl flex-col justify-between gap-y-6 border-y bg-[radial-gradient(35%_80%_at_25%_0%,--theme(--color-foreground/.08),transparent)] px-4 py-8">
+        <div className="relative mx-auto flex w-full max-w-4xl flex-col justify-between gap-y-6 border-y px-4 py-8">
           <PlusIcon
             className="absolute top-[-12.5px] left-[-11.5px] z-1 size-6"
             strokeWidth={1}

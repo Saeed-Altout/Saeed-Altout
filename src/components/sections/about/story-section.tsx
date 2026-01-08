@@ -4,7 +4,7 @@ import { StoryCard } from "@/components/cards/story-card";
 
 import { storyPoints } from "@/constants";
 
-export function AboutStorySection() {
+export function StorySection() {
   return (
     <section id="about-story">
       <Container className="space-y-8">

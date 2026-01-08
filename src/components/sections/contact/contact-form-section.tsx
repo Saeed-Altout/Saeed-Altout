@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { toast } from "sonner";
+import { useState } from "react";
 import { SendIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,6 @@ import { Container } from "@/components/ui/container";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Heading } from "@/components/ui/heading";
 
 export function ContactFormSection() {
   const [isLoading, setIsLoading] = useState(false);

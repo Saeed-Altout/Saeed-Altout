@@ -83,9 +83,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <NavMain items={data.navMain} />
       </SidebarContent>
-      <SidebarFooter>
+      {/* <SidebarFooter>
         <SidebarOptInForm />
-      </SidebarFooter>
+      </SidebarFooter> */}
     </Sidebar>
   );
 }
