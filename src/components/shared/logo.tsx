@@ -1,7 +1,6 @@
 "use client";
 import { ZapIcon } from "lucide-react";
-
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 
 export function Logo() {
   return (
