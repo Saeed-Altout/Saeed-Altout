@@ -1,13 +1,13 @@
 import { StarsIcon } from "lucide-react";
 
 import { Container } from "@/components/ui/container";
-import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
+import { Sparkles } from "@/components/ui/sparkles";
 
 export function HeroSection() {
   return (
     <section id="hero">
-      <Container className="flex items-center justify-center flex-col gap-y-6">
+      <Container className="flex items-center justify-center flex-col gap-y-6 pb-0">
         <Heading
           title="Explore, Thinking & Growth with"
           description="I'm Saeed Altout, a frontend developer dedicated to building modern, scalable, and user-centric web applications. With a focus on clean code and exceptional user experiences, I transform ideas into reality."
@@ -15,7 +15,15 @@ export function HeroSection() {
           badge="Frontend Developer specialist in React.js & Next.js"
           icon={StarsIcon}
         />
-        <Button>Explore Our Projects</Button>
+
+        <div className="relative -mt-50 h-96 w-full overflow-hidden [mask-image:radial-gradient(50%_50%,white,transparent)]">
+          <div className="absolute inset-0 before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#8350e8,transparent_70%)] before:opacity-40" />
+          <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] z-10 w-[200%] rounded-[100%] border-t border-zinc-900/20 dark:border-white/20 bg-white dark:bg-zinc-900" />
+          <Sparkles
+            density={1200}
+            className="absolute inset-x-0 bottom-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
+          />
+        </div>
       </Container>
     </section>
   );
