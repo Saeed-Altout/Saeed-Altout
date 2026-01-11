@@ -19,18 +19,18 @@ export function Sparkles({
   options = {},
 }: {
   className?: string;
-  size: number;
-  minSize: null;
-  density: number;
-  speed: number;
-  minSpeed: null;
-  opacity: number;
-  opacitySpeed: number;
-  minOpacity: null;
-  color: string;
-  background: string;
+  size?: number;
+  minSize?: null;
+  density?: number;
+  speed?: number;
+  minSpeed?: null;
+  opacity?: number;
+  opacitySpeed?: number;
+  minOpacity?: null;
+  color?: string;
+  background?: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  options: any;
+  options?: any;
 }) {
   const [isReady, setIsReady] = useState(false);
 
