@@ -7,7 +7,7 @@ import { technologies } from "@/constants";
 export function TechnologiesSection() {
   return (
     <section id="technologies">
-      <Container className="relative flex w-full flex-col items-center justify-center gap-1 overflow-hidden pt-4">
+      <Container className="relative flex w-full flex-col items-center justify-center gap-1 overflow-hidden pt-6">
         <Marquee pauseOnHover repeat={3} className="[--duration:50s]">
           {technologies.map((tech) => (
             <TechnologyCard key={tech.name} tech={tech} />
