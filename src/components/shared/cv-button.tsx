@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { FileIcon } from "lucide-react";
-import Link from "next/link";
 
 export function CvButton() {
   //   const downloadCV = () => {
@@ -12,10 +11,10 @@ export function CvButton() {
 
   return (
     <Button size="sm" variant="ghost" asChild>
-      <Link href="/cv.pdf" download="Saeed_Altout_Cv.pdf">
+      <a href="/cv.pdf" download="Saeed_Altout_Cv.pdf">
         <FileIcon />
         Download CV
-      </Link>
+      </a>
     </Button>
   );
 }
