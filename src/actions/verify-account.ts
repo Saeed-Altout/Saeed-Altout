@@ -1,10 +1,9 @@
 import { VerifyAccountSchema } from "@/schemas";
-import { toast } from "sonner";
 import z from "zod";
 
 export async function verifyAccount(
   values: z.infer<typeof VerifyAccountSchema>
-) {
+): Promise<{ success: boolean; message: string }> {
   try {
     const res = await fetch("http://localhost:3000/auth/verify-account", {
       method: "POST",
@@ -14,19 +13,21 @@ export async function verifyAccount(
       body: JSON.stringify(values),
     });
 
-    const data = await res.json();
-
     if (!res.ok) {
-      toast.error(
-        Array.isArray(data.message) ? data.message.join(", ") : data.message
-      );
-      return;
+      return {
+        success: false,
+        message: "Something went wrong. Please try again.",
+      };
     }
 
-    toast.success(
-      Array.isArray(data.message) ? data.message.join(", ") : data.message
-    );
+    return {
+      success: true,
+      message: "Account verified successfully",
+    };
   } catch {
-    toast.error("Something went wrong. Please try again.");
+    return {
+      success: false,
+      message: "Something went wrong. Please try again.",
+    };
   }
 }

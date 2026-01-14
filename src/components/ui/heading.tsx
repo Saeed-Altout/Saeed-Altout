@@ -1,5 +1,6 @@
 import { LucideIcon } from "lucide-react";
 import { Badge } from "./badge";
+import { cn } from "@/lib/utils";
 
 export function Heading({
   title,
@@ -34,6 +35,30 @@ export function Heading({
           {description}
         </p>
       )}
+    </div>
+  );
+}
+
+export function Heading2({
+  title,
+  description,
+  children,
+  className,
+  ...props
+}: React.ComponentProps<"div"> & {
+  title: string;
+  description?: string;
+}) {
+  return (
+    <div
+      className={cn("flex items-center justify-between", className)}
+      {...props}
+    >
+      <div className="space-y-2">
+        <h2 className="text-3xl font-bold">{title}</h2>
+        {description && <p className="text-muted-foreground">{description}</p>}
+      </div>
+      {children}
     </div>
   );
 }

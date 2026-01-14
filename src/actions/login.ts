@@ -6,7 +6,7 @@ import { cookies } from "next/headers";
 
 export async function login(
   values: z.infer<typeof LoginSchema>
-): Promise<ApiResponse> {
+): Promise<{ success: boolean; message: string }> {
   try {
     const res = await fetch("http://localhost:3000/auth/login", {
       method: "POST",

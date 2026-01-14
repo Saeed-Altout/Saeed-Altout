@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { toast } from "sonner";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import { verifyAccount } from "@/actions/verify-account";
@@ -21,9 +22,12 @@ export function VerifyAccountForm() {
       if (!token) return;
 
       try {
-        await verifyAccount({ token });
+        const res = await verifyAccount({ token });
         if (!isMounted) return;
-        router.push("/auth/login");
+        if (res.success) {
+          router.push("/auth/login");
+          toast.success(res.message);
+        }
       } catch {
         console.log("Failed Verify");
       }

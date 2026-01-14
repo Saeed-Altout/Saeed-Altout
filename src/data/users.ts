@@ -1,15 +1,10 @@
-type ApiResponse = {
-  success: boolean;
-  message: string;
-};
-
-type User = {
+export interface User {
   id: string;
-  email: email;
+  email: string;
   password: string;
   isVerified: boolean;
   role: "user" | "admin";
   refreshTokenHash: string;
   createdAt: Date;
   updatedAt: Date;
-};
+}

@@ -15,16 +15,13 @@ export const VerifyAccountSchema = z.object({
   token: z.string(),
 });
 
-export const ResetSchema = z.object({
-  email: z.email(),
+export const CreateProjectSchema = z.object({
+  name: z.string().min(2, {
+    message: "Name must be at least 2 characters.",
+  }),
 });
 
-export const NewPasswordSchema = z
-  .object({
-    password: z.string().min(6),
-    confirmPassword: z.string().min(6),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    path: ["confirmPassword"],
-    message: "Passwords do not match",
-  });
+export const UpdateProjectSchema = z.object({
+  name: z.string(),
+  description: z.string(),
+});

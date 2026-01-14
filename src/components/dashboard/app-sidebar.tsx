@@ -1,11 +1,7 @@
 "use client";
 
 import * as React from "react";
-import {
-  IconDashboard,
-  IconInnerShadowTop,
-  IconFolderCheck,
-} from "@tabler/icons-react";
+import { IconDashboard, IconFolderCheck } from "@tabler/icons-react";
 
 import { NavMain } from "@/components/dashboard/nav-main";
 import { NavUser } from "@/components/dashboard/nav-user";
@@ -34,7 +30,7 @@ const data = {
     },
     {
       title: "Projects",
-      url: "/projects",
+      url: "/dashboard/projects",
       icon: IconFolderCheck,
     },
   ],

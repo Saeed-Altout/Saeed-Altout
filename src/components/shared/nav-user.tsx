@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { logout } from "@/actions/logout";
+import { User } from "@/data/users";
 
 export function NavUser({ user }: { user: User }) {
   return (

@@ -5,7 +5,7 @@ import { z } from "zod";
 
 export async function register(
   values: z.infer<typeof RegisterSchema>
-): Promise<ApiResponse> {
+): Promise<{ success: boolean; message: string }> {
   try {
     const res = await fetch("http://localhost:3000/auth/register", {
       method: "POST",

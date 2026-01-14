@@ -1,5 +1,6 @@
 "use server";
 import { cookies } from "next/headers";
+import { User } from "@/data/users";
 
 interface Auth {
   isAuthentication: boolean;

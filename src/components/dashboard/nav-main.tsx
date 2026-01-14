@@ -43,7 +43,7 @@ export function NavMain({
               variant="outline"
               asChild
             >
-              <Link href="/projects">
+              <Link href="/dashboard/projects">
                 <IconFolderCheck />
                 <span className="sr-only">IconFolderCheck</span>
               </Link>
