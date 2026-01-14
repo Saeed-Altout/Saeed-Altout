@@ -1,11 +1,14 @@
 "use server";
 import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 
 export async function logout() {
   const cookieStore = await cookies();
 
   cookieStore.delete("NEXT_ACCESS_TOKEN");
   cookieStore.delete("NEXT_REFRESH_TOKEN");
+
+  redirect("/auth/login");
 }
 
 // export async function logout() {

@@ -46,6 +46,8 @@ export function LoginForm() {
     startTransition(async () => {
       const res = await login(values);
 
+      console.log(res);
+
       if (res.success) {
         toast.success(res.message);
         router.push(callbackUrl || DEFAULT_LOGIN_REDIRECT);

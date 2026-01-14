@@ -44,9 +44,7 @@ export async function login(
 
     return {
       success: true,
-      message: Array.isArray(data.message)
-        ? data.message.join(", ")
-        : data.message,
+      message: "Login successfully",
     };
   } catch {
     return {
