@@ -1,6 +1,6 @@
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { NavUser } from "@/components/shared/nav-user";
-import { CvButton } from "@/components/shared/cv-button";
+// import { CvButton } from "@/components/shared/cv-button";
 
 import { getCurrentUser } from "@/lib/auth";
 
@@ -13,7 +13,7 @@ export async function SiteHeader() {
         <SidebarTrigger className="-ml-1" />
         <div className="ml-auto">
           {user && <NavUser user={user} />}
-          <CvButton />
+          {/* <CvButton /> */}
         </div>
       </div>
     </header>
