@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FolderIcon } from "lucide-react";
+import { FolderIcon, GithubIcon, GlobeIcon, HeartIcon } from "lucide-react";
 
 import {
   Card,
@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/constants";
+import Link from "next/link";
+import { Badge } from "../ui/badge";
 
 export function ProjectCard({
   project,
@@ -39,10 +41,26 @@ export function ProjectCard({
           {project.description}
         </CardDescription>
       </CardHeader>
-      <CardFooter>
-        <Button className="w-full" size="lg">
-          Get Started
+      <CardFooter className="justify-between">
+        <Button size="sm" variant="ghost">
+          <HeartIcon /> {project.like}
         </Button>
+        <div className="flex items-center gap-2">
+          <Button size="sm" variant="ghost" asChild>
+            <Link href={project.liveUrl}>
+              <GlobeIcon />
+            </Link>
+          </Button>
+          {project.repoUrl ? (
+            <Button size="sm" variant="ghost" asChild>
+              <Link href={project.repoUrl}>
+                <GithubIcon />
+              </Link>
+            </Button>
+          ) : (
+            <Badge>private</Badge>
+          )}
+        </div>
       </CardFooter>
     </Card>
   );

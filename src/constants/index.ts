@@ -3,26 +3,63 @@ import { CodeIcon, RocketIcon, HeartIcon } from "lucide-react";
 export const projects = [
   {
     id: "1",
-    name: "Flexify – Portfolio & CMS Platform",
+    name: "Portia.io",
     imageUrl: "",
     description:
-      "A full-featured portfolio application with a public-facing website and an admin dashboard. Includes CRUD management for projects, services, technologies, testimonials, users, and site settings. Built with Next.js, TypeScript, Tailwind CSS, Zustand, React Query, and Framer Motion.",
-    liveUrl: "https://flexifypro.vercel.app/en",
+      "A modern web application for managing mobile proxies with unlimited data and effortless country switching. Built with Next.js 14, TypeScript, and a comprehensive tech stack.",
+    liveUrl: "https://portia.pro/",
+    repoUrl: null,
+    like: 4,
   },
   {
     id: "2",
-    name: "Notion Clone – Real-Time Productivity Platform",
+    name: "Snam",
     imageUrl: "",
     description:
-      "A full-stack Notion-like application featuring real-time collaboration, hierarchical documents, dark mode, and live updates. Includes secure authentication, file handling, and optimistic UI updates using Convex, Clerk, and EdgeStore.",
-    liveUrl: "https://flexify-notion-clone.vercel.app/",
+      "Snam is a luxury real estate brand that offers carefully selected high-quality residences and premium property investments across key Gulf locations, combining refined taste with expert service.",
+    liveUrl: "https://snam.sa/ar",
+    repoUrl: null,
+    like: 9,
   },
   {
     id: "3",
-    name: "Vendo – Multi-Store E-commerce CMS",
+    name: "Notion",
     imageUrl: "",
     description:
-      "A scalable multi-tenant e-commerce CMS with centralized admin dashboard and public storefronts. Includes secure authentication, Stripe payments, webhook-based order automation, and high-performance UI.",
+      "A full-featured Notion clone built with modern web technologies. This application replicates the core functionality of Notion, offering a seamless workspace for note-taking, document management, and real-time collaboration.",
+    liveUrl: "https://flexify-notion-clone.vercel.app/",
+    repoUrl: "https://github.com/Saeed-Altout/Notion-Clone",
+    like: 2,
+  },
+  {
+    id: "4",
+    name: "Vendo",
+    imageUrl: "",
+    description:
+      "A comprehensive, multi-store E-commerce Admin Dashboard and Storefront built with modern web technologies. This application serves as a centralized content management system for managing products, categories, billboards, orders, and store attributes across multiple storefronts, with integrated payment processing.",
+    liveUrl: "https://vendo-beta.vercel.app/",
+    repoUrl: "https://github.com/Saeed-Altout/Vendo",
+    like: 0,
+  },
+  {
+    id: "5",
+    name: "Wege Store",
+    imageUrl: "",
+    description:
+      "A modern e-commerce platform built with reliability and scalability in mind.",
+    liveUrl: "https://wega-store.vercel.app/",
+    repoUrl: "https://github.com/Saeed-Altout/Wega-Store",
+    like: 3,
+  },
+  {
+    id: "6",
+    name: "NexAuth",
+    imageUrl: "",
+    description:
+      "A production-ready, full-featured authentication starter kit built with Next.js 16, NextAuth.js v5, Prisma, and PostgreSQL. This boilerplate provides a complete authentication system with email verification, password reset, two-factor authentication, and OAuth integration (Google & GitHub).",
+    liveUrl: "https://flexify-nexauth.vercel.app/",
+    repoUrl: "https://github.com/Saeed-Altout/NexAuth",
+    like: 6,
   },
 ];
 
